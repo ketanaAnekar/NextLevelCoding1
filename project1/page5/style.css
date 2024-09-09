@@ -1,0 +1,86 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:#ff00c3;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 2s ease; 
+    overflow-y: hidden;
+}
+
+.typewriter {
+    font-family: "dazzle-unicase", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 4.6vh;
+    color: #4000ff; 
+    margin: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid #4000ff; 
+    animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+button {
+    font-family: "dazzle-unicase", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 20px 40px;
+    background-color: rgb(255, 0, 195);
+    color: #4000ff;
+    border-radius: 5%;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: rgb(255, 75, 213);
+}
+
+#videoContainer {
+    display: none;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+video {
+    max-width: 300px;  
+    height: auto;
+}
+
+h2 {
+    font-family: "dazzle-unicase", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color:#4000ff;  
+    margin: 10px 0;
+}
+#nextPageButton {
+    font-family: "dazzle-unicase", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 20px 40px;
+    background-color: #1a1a1a;
+    color: #4000ff;
+    border-radius: 5%;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: rgb(255, 75, 213);
+}

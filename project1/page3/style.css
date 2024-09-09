@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(255, 0, 195);
+    font-family: "dazzle-unicase", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color:  #4000ff;
+}
+#textArea{
+    position: relative;
+    font-size:7.5vh;
+    text-align: center;
+    white-space: nowrap;
+}
+#textArea::after {
+    content: '|';
+    color:  #4000ff; 
+    font-weight:100; 
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+#buttonContainer {
+    display: none; 
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(255, 0, 195);
+    padding: 20px 40px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "dazzle-unicase", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color:  #4000ff; 
+
+}
+button:hover{
+    background-color:rgb(255, 75, 213) ;
+}
+#videoArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    width: 100%;
+    overflow: hidden;
+}
+video {
+    width: 200vh;
+    height: 80vh;
+}
+#continueButtonArea {
+    margin-top: 20px;
+}
+#continueButton {
+    padding: 20px 40px;
+    background-color:  rgb(255, 0, 195);
+    color:  #4000ff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "dazzle-unicase", sans-serif;
+}
+#continueButton:hover {
+    background-color:rgb(255, 75, 213);
+}

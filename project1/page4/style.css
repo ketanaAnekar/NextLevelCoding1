@@ -1,0 +1,68 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background:rgb(255, 0, 195);
+}
+
+canvas {
+    margin-top: 20px;
+    border: 1px  #4000ff;
+}
+
+button {
+    background-color: rgb(255, 0, 195);
+    color: #4000ff;
+    font-family: "dazzle-unicase", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: block; 
+    position: absolute;
+    top: 40vh;
+}
+
+#countdown, #messageBox {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #4000ff;
+    margin-top: 20px;
+    display: block; 
+    position: relative;
+    top: 10vh;
+}
+.typewriter{
+    position: absolute;
+    top: 1vh;
+    text-align:center;
+    color: #4000ff;
+    font-family: "dazzle-unicase", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 7vh;
+}
+.typewriter::after{
+    content: '|';
+    color:#4000ff; 
+    font-weight:100; 
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+#countdown{
+    font-size: 5vh;
+}
+#messageBox{
+    font-size: 5vh;
+}
