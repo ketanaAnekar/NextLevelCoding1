@@ -5,7 +5,7 @@ let displayDuration = 2000;
 let poppedMessages = []; 
 
 function setup() {
-  createCanvas(800, 500); 
+  createCanvas(800, 600); 
 
 
   textFont('Dazzle Unicase');
