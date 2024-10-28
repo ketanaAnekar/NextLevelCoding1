@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+@font-face {
+    font-family: 'PPPangaia';
+    src: url(PPPangaia-Ultralight.otf);
+}
+.logo-container {
+    display: flex;
+    gap: 10px;
+    font-size: 100px;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+    font-family: 'PPPangaia';
+}
+
+.letter {
+    position: relative;
+    color: rgb(43, 54, 251);
+    z-index: 2;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3; /* Make sure the canvas with flowers is on top */
+    pointer-events: none; /* Ensures the canvas doesn't interfere with interactions */
+}
