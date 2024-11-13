@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Star Customizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>HEALTH ADE KOMBUCHA STAR</h1>
+    <form id="customizerForm">
+        <div class="option-group">
+            <label for="flavor">Select Flavor Profile:</label>
+            <select id="flavor" name="flavor" onchange="updateStar()">
+                <option value="spicy">Spicy</option>
+                <option value="tangy">Tangy</option>
+                <option value="fruity">Fruity</option>
+            </select>
+        </div>
+
+        <div class="option-group">
+            <label for="sugarLevel">Sugar Level:</label>
+            <input type="range" id="sugarLevel" min="0" max="100" step="10" value="50" oninput="updateStar()">
+        </div>
+
+        <div class="option-group">
+            <label for="juiceContent">Juice Content (%):</label>
+            <input type="range" id="juiceContent" min="0" max="100" step="10" value="20" oninput="updateStar()">
+        </div>
+    </form>
+
+    <div id="starPreview">
+        <!-- p5.js canvas will be rendered here -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Ade Kombucha Label Customizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>HEALTH ADE KOMBUCHA</h1>
+
+    <div id="dataHere">
+        <label for="flavorSelect">Choose Flavor:</label>
+        <select id="flavorSelect" onchange="updatePackaging()"></select>
+        
+        <label for="typeSelect">Choose Type:</label>
+        <select id="typeSelect" onchange="updatePackaging()">
+            <option value="cleanse">Cleanse</option>
+            <option value="boost">Boost</option>
+            <option value="glow">Glow</option>
+            <option value="tea">Tea</option>
+            <option value="fizz">Fizz</option>
+        </select>
+    </div>
+
+    <!-- Sliders for attribute controls -->
+    <div class="controls">
+        <label>Fruity Level: <input type="range" id="fruitySlider" min="0" max="3" value="0" onchange="updateAttributeControls()"></label>
+        <label>Tangy Level: <input type="range" id="tangySlider" min="0" max="3" value="0" onchange="updateAttributeControls()"></label>
+        <label>Floral Level: <input type="range" id="floralSlider" min="0" max="3" value="0" onchange="updateAttributeControls()"></label>
+        <label>Spicy Level: <input type="range" id="spicySlider" min="0" max="3" value="0" onchange="updateAttributeControls()"></label>
+        <label>Sweet Level: <input type="range" id="sweetSlider" min="0" max="3" value="0" onchange="updateAttributeControls()"></label>
+    </div>
+
+    <div id="packagingPreview"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
