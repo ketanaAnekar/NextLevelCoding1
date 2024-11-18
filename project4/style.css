@@ -1,47 +1,78 @@
-
 body {
-    text-align: center;
-    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
     font-family: "dazzle-unicase", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Control Panel Styling */
+.control-panel {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: inset -2px 0 4px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
     color: #333;
-    font-family: "dazzle-unicase", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
-form {
-    margin: 20px auto;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    width: 320px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.option-group {
-    margin: 15px 0;
 }
 
 label {
     display: block;
+    margin: 10px 0 5px;
     font-size: 1em;
-    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-input[type="range"] {
+select, input[type="range"] {
     width: 100%;
+    margin-bottom: 15px;
 }
 
-#packagingPreview {
+.controls {
     margin-top: 20px;
-    width: 300px;
-    height: 500px;
+}
+
+/* Label Preview Styling */
+.label-preview {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
     position: relative;
-    border-radius: 15px;
+    padding: 20px;
+}
+.save-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
 }
