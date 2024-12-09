@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Memory Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <svg class="curved-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60000 30000" width="100%" height="8000">
+            <defs>
+                <!-- Extended Top Arc Path for MUSIC -->
+                <path id="arcTop" d="M 500 16000 A 30000 18000 0 0 1 59500 16000" />
+                <!-- Extended Bottom Arc Path for VISUALIZER -->
+                <path id="arcBottom" d="M 500 19000 A 30000 18000 0 0 0 59500 16000" />
+            </defs>
+    
+            <!-- MUSIC (Top Arc) -->
+            <text text-anchor="middle" font-size="20000" font-family="'PP Pangaia', sans-serif" fill="white">
+                <textPath href="#arcTop" startOffset="50%">MUSIC</textPath>
+            </text>
+    
+            <!-- MEMORY (Centered, Larger) -->
+            <text x="50%" y="16800" text-anchor="middle" font-size="60000" font-family="'PP Pangaia', sans-serif" fill="white">
+                MEMORY
+            </text>
+    
+            <!-- VISUALIZER (Bottom Arc) -->
+            <text text-anchor="middle" font-size="20000" font-family="'PP Pangaia', sans-serif" fill="white">
+                <textPath href="#arcBottom" startOffset="50%">VISUALIZER</textPath>
+            </text>
+        </svg>
+    </header>
+    <div class="layout">
+        <div class="control-panel">
+            <form id="userForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" required>
+                <label for="song">Song Name:</label>
+                <input type="text" id="song" required>
+                <label for="memoryType">Memory Type:</label>
+                <select id="memoryType">
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="wholesome">Wholesome</option>
+                </select>
+                <label for="memoryDescription">Describe the Memory:</label>
+                <textarea id="memoryDescription" required></textarea>
+                <label for="duration">Duration Listened:</label>
+                <select id="duration">
+                    <option value="hours">Hours</option>
+                    <option value="days">Days</option>
+                    <option value="weeks">Weeks</option>
+                </select>
+                <label for="genre">Genre:</label>
+                <select id="genre">
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="indie">Indie</option>
+                    <option value="alternative">Alternative</option>
+                    <option value="hip-hop">Hip-Hop</option>
+                    <option value="rnb">R&B</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="country">Country</option>
+                    <option value="electronic">Electronic</option>
+                    <option value="dance">Dance</option>
+                </select>
+                <label for="color">Color Association:</label>
+                <input type="color" id="color">
+                <label for="time">When Do You Listen Most:</label>
+                <select id="time">
+                    <option value="night">Night</option>
+                    <option value="morning">Morning</option>
+                    <option value="evening">Evening</option>
+                    <option value="afternoon">Afternoon</option>
+                </select>
+                <div class="controls">
+                    <button id="clearCanvas" type="button">Clear Canvas</button>
+                    <button id="saveImage" type="button">Save as Image</button>
+                    <button id="savePng" type="button">Save as PNG</button>
+                </div>
+                <button type="submit">Generate Shape</button>
+            </form>
+        </div>
+        <div id="canvasContainer"></div>
+    </div>
+</body>
+</html>

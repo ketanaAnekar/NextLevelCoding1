@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'PP Pangaia';
+    src: 
+         url('./PPPangaia-Ultralight.otf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: 'PP Pangaia', sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.site-header {
+    text-align: center;
+    padding-top: 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.curved-text {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 200px;
+    overflow: visible;
+}
+
+.layout {
+    display: flex;
+    flex: 1;
+}
+.control-panel {
+    width: 500px;
+    padding: 10px 20px 20px 20px; /* Less padding */
+    background-color: #000000;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'PP Pangaia', sans-serif;
+    margin-right: 10px;
+    margin-top: -200px;  /* Adjust this value to move up */
+    overflow-y: auto;
+}
+
+
+
+.control-panel label {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+    color: white;
+}
+
+.control-panel input[type="text"],
+.control-panel input[type="color"],
+.control-panel select,
+.control-panel textarea {
+    width: 60%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    font-family: 'PP Pangaia', sans-serif;
+}
+
+.control-panel button {
+    display: block;
+    width: 60%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.control-panel button:hover {
+    background-color: #ddd;
+}
+
+#canvasContainer {
+    flex: 1;
+    position: relative;
+}
